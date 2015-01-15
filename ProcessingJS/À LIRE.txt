@@ -1,0 +1,5 @@
+POUR FAIRE DES RENDUS PROCESSING DANS VOTRE NAVIGATEUR:
+- Ouvrez index.html avec un éditeur de texte
+- Collez votre code Processing entre les lignes:///////////////////////////////////////////////////////
+- Enregistrez
+- Ouvrez index.html avec Chrome, Firefox, Opéra, ... ou la dernière version d'Internet Explorer
