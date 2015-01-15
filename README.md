@@ -1,118 +1,157 @@
 #Processing Lyon # 05
 
+L: J'ai mis en commentaire ce qu'il me semble pas nécessaire
+
+###Raccourcis
+->Run         : CTRL+R  
+->Référence   : CTRL+MAJ+F   
+->Auto indent : CTRL+T  
+
+L: Je serai pour démarrer l'atelier directement avec le mode continu, ça peut faire gagner du temps
+```
+  void setup()
+  {
+    size(width, height);
+  }
+  
+  void draw(){}  
+  
+```
+
 ###GÉOMÉTRIES DE BASE
-point(x, y);  
-line(x1, y1, x2, y2);  
+```
+  point(x, y);  
+  line(x1, y1, x2, y2);  
+  triangle(x1, y1, x2, y2, x3, y3);  
+  quad(x1, y1, x2, y2, x3, y3, x4, y4);  
+```
 
-size(width, height);  
-->CTRL+R  
-Référence / CTRL+MAJ+F  
+Est-ce qu'on montre les shapes?
+```
+  beginShape();   
+  vertex(x,y);  
+  ...  
+  vertex(x,y);  
+  endShape();
+```
 
-triangle(x1, y1, x2, y2, x3, y3);  
-quad(x1, y1, x2, y2, x3, y3, x4, y4);  
-
-beginShape();   
-vertex(x,y);  
-...  
-vertex(x,y);  
-endShape();
-
-->Référence CTRL+MAJ+F  
+```
 rect(x, y, width, height);  
 ellipse(x, y, width, height);  
+```
 
+Peut être pas besoin des modes?
+```
 //rectMode(CENTER);  
 //ellipseMode(CORNER);  
-smooth();  
-
+```
 ###COULEUR RGB
+-> ColorSelector  
+```
 background();  
 stroke();  
 strokeWeight();  
 fill();  
--> ColorSelector  
 noStroke();  
 noFill();  
-
+```
 ###VARIABLES
+Variables d'environnement:
+```
 width, height  
 
-int  
-float  
+mouseX, mouseY  
+
 random(value);  
 random(valMin, valMax);  
+```
+Types de variables
+`int, float, ...`
 
-###MODE CONTINU
-void setup(){}  
-void draw(){}  
-CTRL+T  
+```
+  frameRate();  
+  frameCount  
+  
+  println();  
+  
+  hour();  
+  minute();  
+  second();  
+```
+###INTERACTION
+```
+  void mousePressed(){}  
+  //mousePressed boolean  
+  //mouseButton == RIGHT / LEFT  
+  //void mouseReleased(){}  
+  //void mouseMoved(){}  
+  //void mouseDragged(){}  
+  
+  void keyPressed(){}  
+  if( key == ' ' ){}  
+  saveFrame();  
+  saveFrame("filename-####.ext"); ext = either "tif", "tga", "jpg", "png"
+```
 
-frameRate();  
-frameCount  
+###FONCTIONS
+```
+  void anything(){}  
+  void anything(int a, int b){}  //fonctions avec params
+  //int a(int i, int j){}  //peut être pas de fonction avec return ?
+```
 
-mouseX, mouseY  
-println();  
+###CONDITIONS
+```
+  if(){}  
+  if(){} else{}  
+  if(){} else if(){} else{}  
+  && ||  
+```
 
-hour();  
-minute();  
-second();  
-
-###MÉTHODES
-void mousePressed(){}  
-//mousePressed boolean  
-//mouseButton == RIGHT / LEFT  
-//void mouseReleased(){}  
-//void mouseMoved(){}  
-//void mouseDragged(){}  
-
-void keyPressed(){}  
-key==''  
-saveFrame();  
-saveFrame("filename-####.ext"); ext = either "tif", "tga", "jpg", "png"
-
-void anything(){}  
-void anything(int a, int b){}  
-//int a(int i, int j){}  
-
-###IF, WHILE, FOR
-if(){}  
-if(){} else{}  
-if(){} else if(){} else{}  
-&& ||  
-
-while(){}  
-
-while(){  
+###REPETITIONS
+Malgré le risque de la boucle infinie, la boucle While reste quand même plus simple pour introduire les principes de répétitions
+```
+  while(){}  
+  
   while(){  
-  }   
-}
-
-
-for(;;){}
-
-for(;;){  
+    while(){  
+    }   
+  }
+  
+  
+  for(;;){}
+  
   for(;;){  
+    for(;;){  
+    }  
   }  
-}  
+```
 
 ###TEXTES
-String str="une phrase";  
-String[] str = loadStrings("monFichier.txt");  
-text("word",x,y);  
-
-println(PFont.list());  
+```
+  String str="une phrase";  
+  text("word",x,y);  
+  String[] str = loadStrings("monFichier.txt");  // demande l'introduction des tableaux....
+```
 
 ###TYPO
-PFont font;  
-font = createFont("FFScala", 32);  
-font = createFont(name, size, smooth) smooth=true||false  
-textMode(SCREEN);  
-textFont(font);
+```
+  PFont font;  
+  println(PFont.list());  
+  font = createFont("FFScala", 32);  
+  font = createFont(name, size, smooth) smooth=true||false  
+  textMode(SCREEN);  
+  textFont(font);
+```
 
 ###IMAGES
-PImage  
-loadImage();  
-image(img, x, y);  
+```
+  PImage  
+  loadImage();  
+  image(img, x, y);  
+  img.resize(width, height);
+  img.get( mouseX, mouseY);
+```
 ___
 Pour aller plus loin:  
 -> examples / basics / topics  
