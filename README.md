@@ -101,6 +101,9 @@ création et types de variables:
 ```
 
 ###CONDITIONS
+CRIBE: Est-ce qu'on ferait pas les conditions avant les intéractions ?
+On aborde des conditions avec keyPressed et c'est un chapitre qui devrait être rapide donc autant le faire avant.
+Comme ça on peut mettre en pratique dans un exercice regroupant variables et conditions. Ca peut être plus riche.
 ```
   if(){}  
   if(){} else{}  
