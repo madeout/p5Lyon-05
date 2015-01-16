@@ -58,17 +58,13 @@ noFill();
 ###VARIABLES
 Variables d'environnement:
 ```
-width, height  
+  width, height  
+  
+  mouseX, mouseY  
+  
+  random(value);  
+  random(valMin, valMax);  
 
-mouseX, mouseY  
-
-random(value);  
-random(valMin, valMax);  
-```
-Types de variables
-`int, float, ...`
-
-```
   frameRate();  
   frameCount  
   
@@ -78,6 +74,10 @@ Types de variables
   minute();  
   second();  
 ```
+
+création et types de variables:
+`int, float, string, ...`
+
 ###INTERACTION
 ```
   void mousePressed(){}  
