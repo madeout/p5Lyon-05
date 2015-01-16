@@ -7,7 +7,7 @@ L: J'ai mis en commentaire ce qu'il me semble pas nécessaire
 ->Référence   : CTRL+MAJ+F   
 ->Auto indent : CTRL+T  
 
-L: Je serai pour démarrer l'atelier directement avec le mode continu, ça peut faire gagner du temps
+L: Je serais pour démarrer l'atelier directement avec le mode continu, ça peut faire gagner du temps
 ```
   void setup()
   {
