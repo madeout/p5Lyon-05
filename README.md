@@ -41,6 +41,7 @@ ellipse(x, y, width, height);
 ```
 
 Peut être pas besoin des modes?
+CRIBE: Ca peut être utile et c'est pas grand chose.
 ```
 //rectMode(CENTER);  
 //ellipseMode(CORNER);  
