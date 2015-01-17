@@ -79,6 +79,17 @@ Variables d'environnement:
 création et types de variables:
 `int, float, string, ...`
 
+###CONDITIONS
+CRIBE: Est-ce qu'on ferait pas les conditions avant les intéractions ?
+On aborde des conditions avec keyPressed et c'est un chapitre qui devrait être rapide donc autant le faire avant.
+Comme ça on peut mettre en pratique dans un exercice regroupant variables et conditions. Et aborder les interactions en connaissant les conditions ça ouvre à plus de possibilité dans les exercices.
+```
+  if(){}  
+  if(){} else{}  
+  if(){} else if(){} else{}  
+  && ||  
+```
+
 ###INTERACTION
 ```
   void mousePressed(){}  
@@ -99,17 +110,6 @@ création et types de variables:
   void anything(){}  
   void anything(int a, int b){}  //fonctions avec params
   //int a(int i, int j){}  //peut être pas de fonction avec return ?
-```
-
-###CONDITIONS
-CRIBE: Est-ce qu'on ferait pas les conditions avant les intéractions ?
-On aborde des conditions avec keyPressed et c'est un chapitre qui devrait être rapide donc autant le faire avant.
-Comme ça on peut mettre en pratique dans un exercice regroupant variables et conditions. Et aborder les interactions en connaissant les conditions ça ouvre à plus de possibilité dans les exercices.
-```
-  if(){}  
-  if(){} else{}  
-  if(){} else if(){} else{}  
-  && ||  
 ```
 
 ###REPETITIONS
