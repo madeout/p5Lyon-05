@@ -36,25 +36,25 @@ Est-ce qu'on montre les shapes?
 ```
 
 ```
-rect(x, y, width, height);  
-ellipse(x, y, width, height);  
+  rect(x, y, width, height);  
+  ellipse(x, y, width, height);  
 ```
 
 Peut être pas besoin des modes?
 CRIBE: Ca peut être utile et c'est pas grand chose.
 ```
-//rectMode(CENTER);  
-//ellipseMode(CORNER);  
+  //rectMode(CENTER);  
+  //ellipseMode(CORNER);  
 ```
 ###COULEUR RGB
 -> ColorSelector  
 ```
-background();  
-stroke();  
-strokeWeight();  
-fill();  
-noStroke();  
-noFill();  
+  background();  
+  stroke();  
+  strokeWeight();  
+  fill();  
+  noStroke();  
+  noFill();  
 ```
 ###VARIABLES
 Variables d'environnement:
