@@ -34,7 +34,7 @@ Pour parcourir facilement les tableaux, on utilise des boucles qui passent en re
 Chaque élément (item) du tableau possède une position précise appelée index.
 
     mon_tableau  = [ truc, machin, chose, bidule, ... ]
-                                   0          1         2        3    ...
+                       0       1       2     3    ...
 
 On utilise cet index pour se déplacer dans le tableau.
 
