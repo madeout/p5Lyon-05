@@ -20,6 +20,37 @@ Le format est le suivant :
 
 Pour pouvoir utiliser les données, il nous faut d'abord les parser au bon format.  Nous allons créer un tableau pour contenir chacune des colonnes : ```sentiments```, ```valeurs```, ```couleurs``` afin de pouvoir ensuite les croiser librement.
 
+Pour remplir ces tableaux, nous allons utiliser la commande   ```for ``` qui permet de réaliser des boucles.
+
+### Les boucles "for"
+
+Pour parcourir facilement les tableaux, on utilise des boucles qui passent en revue chaque élément un à un. La plus commune est la boucle for.
+
+    mon_tableau= [ truc, machin, chose, bidule ]
+    pour chaque élément dans mon tableau : 
+        fais çi
+        fais ça
+
+Chaque élément (item) du tableau possède une position précise appelée index.
+
+    mon_tableau  = [ truc, machin, chose, bidule, ... ]
+                                   0          1         2        3    ...
+
+On utilise cet index pour se déplacer dans le tableau.
+
+    pour chaque index compris entre 0 et la fin du tableau :
+        trouve l'élément qui correspond à l'index
+
+Traduit en Processing, voilà ce que ça donne :
+
+    String[] mon_tableau  = [ "truc", "machin", "chose", "bidule" ];
+    for (int i = 0; i < mon_tableau.length; ++i) {
+        String element=mon_tableau[i];
+    }
+
+Par convention, les index sont nommés par une seule lettre : i, j, k...
+
+
 ## Visualisations
 
 Ici, nous proposons un ensemble de visualisation sous forme d'exercices. Chacune est contenue dans une fonction spécifique.
