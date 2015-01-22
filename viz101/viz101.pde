@@ -54,10 +54,10 @@ void setup() {
 
 void draw() {
     background(0);
-    // basicViz();
+    basicViz();
     circleEpileptic();
     // pixelViz();
-    // clickFeeling();
+    clickFeeling();
 }
 
 void clickFeeling() {
