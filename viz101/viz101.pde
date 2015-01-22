@@ -37,9 +37,9 @@ void setup() {
     }
     
     // vérifier les résultats
-    // printArray(sentiments);
-    // printArray(valeurs);
-    // printArray(couleurs);
+    printArray(sentiments);
+    printArray(valeurs);
+    printArray(couleurs);
 
     // trouver la valeur minimum et maximum
     valeurMax = max(valeurs);
@@ -60,6 +60,20 @@ void draw() {
     clickFeeling();
 }
 
+// Afficher les 50 premières valeurs sur un axe des valeurs (et en couleur !).
+void basicViz() {
+
+    for (int i = 0; i < 50; ++i) {
+        int x = round(map(valeurs[i], valeurMin, valeurMax, 0, width));
+        // int y = map(valeurs[i], valeurMin, valeurMax, 0, height) ; 
+        int y = i*height/50;
+        fill(couleurs[i]);
+        text(sentiments[i], x, y);
+    }
+}
+
+
+// Ajouter une valeur à chaque clic 
 void clickFeeling() {
     noStroke();
     int radius = 50;
@@ -70,13 +84,13 @@ void clickFeeling() {
         text(sentiments[i], fixX[i], fixY[i]);
     }
 }
-
 void mouseClicked() {
     fixX[count] = round(random(width));
     fixY[count] = round(random(height));
     count++;
 }
 
+// afficher toutes les valeurs de façon aléatoire 
 void circleEpileptic() {
     int radius = 50;
     noStroke();
@@ -89,18 +103,7 @@ void circleEpileptic() {
     }
 }
 
-void basicViz() {
-
-    // prendre les 50 premières valeurs et les afficher en couleur !
-    for (int i = 0; i < 50; ++i) {
-        int x = round(map(valeurs[i], valeurMin, valeurMax, 0, width));
-        // int y = map(valeurs[i], valeurMin, valeurMax, 0, height) ; 
-        int y = i*height/50;
-        fill(couleurs[i]);
-        text(sentiments[i], x, y);
-    }
-}
-
+// dessine un carré pour chaque sentiment et le colorie dans la couleur associé de façon à occuper tout l'écran
 void pixelViz(){
     int w = 20;
     noStroke();
