@@ -26,7 +26,7 @@ void draw()
   // mouseX and mouseY get the position of the mouse into the scene
   println(mouseX + " | " + mouseY);
   
-  // Create a square witch follows the mouse movements
+  // Create a square which follows the mouse movements
   int squareSize = 15; 
   rect(mouseX, mouseY, squareSize, squareSize);
   

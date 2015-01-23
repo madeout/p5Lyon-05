@@ -18,7 +18,9 @@ void setup() {
     background(255);
 
     // charger le fichier
-    String[] data=loadStrings("feelings.csv");
+    // pour charget un fichier texte, on utilise un tableau de chaîne de caractères 
+    // chaque élément de ce tableau corerspond à une ligne du fichier texte
+    String[] data = loadStrings("feelings.csv");
 
     // donner la taille des tableaux
     sentiments = new String[data.length];

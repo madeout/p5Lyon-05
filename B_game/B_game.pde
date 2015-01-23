@@ -17,7 +17,7 @@ int timer = 0;
 float vX;
 int vY;
 
-void setup() 
+void setup()
 {
     size(640, 480);
     background(230);
@@ -48,20 +48,20 @@ void draw()
     level();
 }
 
-void drawBall()
-{
-    noStroke();
-    fill(0, 100, 150);
-    ellipse(ballX, ballY, ballR, ballR);
-    ellipseMode(CENTER);
-}
-
 void initBall()
 {
     ballX = width/2;
     ballY = height/2;
     vX = random(-3, 3);
     vY = 3;
+}
+
+void drawBall()
+{
+    noStroke();
+    fill(0, 100, 150);
+    ellipse(ballX, ballY, ballR, ballR);
+    ellipseMode(CENTER);
 }
 
 void drawWall()
@@ -85,15 +85,16 @@ void collision()
     if (ballX > width-ballR/2 || ballX < 0+ballR/2)
     {
         ballX = constrain(ballX, 0+ballR/2, width-ballR/2);
-        vX *= -1;
+        vX = -vX;
     }
     if (ballY > height-ballR/2)
     {
         initBall();
-    } 
+    }
     if (ballX > pX-pW/2 && ballX < pX+pW/2 && ballY > pY-(pH/2+ballR/2) && ballY < pY)
     {
-        vY *= -1;
+        vX = map( ballX, pX-pW/2, pX+pW/2, -3, 3 );
+        vY = -vY;
     }
 }
 
