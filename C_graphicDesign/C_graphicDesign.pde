@@ -1,14 +1,15 @@
 PImage img;
+int nbreTypos;
 
 void setup()
 {
-
     size( 700, 1000 );
     img = loadImage( "1g6zo7yl.bmp" );
     img.resize( width, height );
 
-    //printArray( PFont.list() );
-    println( PFont.list().length );
+    printArray( PFont.list() );
+    nbreTypos = PFont.list().length;
+    println( "Nombre de Typos: " + nbreTypos );
 
     background( 255 );
     noStroke();
@@ -16,10 +17,8 @@ void setup()
 
 void draw()
 {
-
     if ( mousePressed )
     {
-
         float distance = dist( mouseX, mouseY, pmouseX, pmouseY );
         //choisirUneTypo( int( distance / 2 ) );
 
@@ -51,11 +50,8 @@ void keyPressed()
 
 void choisirUneTypo( int s )
 {
-    int nbreTypos = PFont.list().length;
     int choix = int( random( nbreTypos ) );
-
-    PFont font = createFont( PFont.list() [ choix ], constrain(s, 2, 180));
+    PFont font = createFont( PFont.list() [ choix ], constrain( s, 2, 180 ) );
     textAlign(CENTER, CENTER);
     textFont(font);
 }
-
