@@ -4,6 +4,11 @@ void setup()
 {
 // displayWidth and displayHeight to get screen size
 size(displayWidth, displayHeight);
+
+// width and height are used to get the scene size;
+rectMode(CENTER);
+rect(width/2, height/2, 10, 10);
+
 }
 
 void draw()
