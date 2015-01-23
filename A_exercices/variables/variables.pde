@@ -16,6 +16,7 @@ char myChar = 'G';
 
 // String is several characters (a word, a sentence, a text...)
 String myString = "Hello world!";
+// Notice that String need " and char '
 
 // You can see a value in the console below width print(var) (or println() to create a new line)
 println(myBoolean);
