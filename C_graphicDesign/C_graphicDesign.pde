@@ -20,7 +20,7 @@ void draw()
     if ( mousePressed )
     {
         float distance = dist( mouseX, mouseY, pmouseX, pmouseY );
-        //choisirUneTypo( int( distance / 2 ) );
+        choisirUneTypo( int( distance / 2 ) );
 
         int nbreRonds = int( random( 1, 10 ) );
         int compteur = 0;
@@ -30,8 +30,8 @@ void draw()
             int x = int( mouseX + random( -distance, distance ) );
             int y = int( mouseY + random( -distance, distance ) );
             fill( img.get( x, y ), 200 );
-            ellipse( x, y, distance, distance );
-            //text( char( 65  + int( random( 26 ) ) ), x, y );
+            //ellipse( x, y, distance, distance );
+            text( char( 65  + int( random( 26 ) ) ), x, y );
 
             compteur++;
         }
