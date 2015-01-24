@@ -52,6 +52,6 @@ void keyPressed()
 void choisirUneTypo( float taille )
 {
     int choix = int( random( nbreTypos ) );
-    PFont font = createFont( PFont.list() [ choix ], min( taille, 2 ) );
+    PFont font = createFont( PFont.list() [ choix ], constrain( taille, 2, 180 ) );
     textFont(font);
 }
