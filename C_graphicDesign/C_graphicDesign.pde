@@ -13,6 +13,7 @@ void setup()
 
     background( 255 );
     noStroke();
+    textAlign(CENTER, CENTER);
 }
 
 void draw()
@@ -20,7 +21,7 @@ void draw()
     if ( mousePressed )
     {
         float distance = dist( mouseX, mouseY, pmouseX, pmouseY );
-        choisirUneTypo( int( distance / 2 ) );
+        choisirUneTypo( distance );
 
         int nbreRonds = int( random( 1, 10 ) );
         int compteur = 0;
@@ -48,10 +49,9 @@ void keyPressed()
     }
 }
 
-void choisirUneTypo( int s )
+void choisirUneTypo( float taille )
 {
     int choix = int( random( nbreTypos ) );
-    PFont font = createFont( PFont.list() [ choix ], constrain( s, 2, 180 ) );
-    textAlign(CENTER, CENTER);
+    PFont font = createFont( PFont.list() [ choix ], min( taille, 2 ) );
     textFont(font);
 }
