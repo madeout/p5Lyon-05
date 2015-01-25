@@ -13,7 +13,6 @@ void setup()
     printArray( PFont.list() );
     
     // on appelle "longueur" d'un tableau, le nombre d'éléments contenus dans ce tableau
-    // 
     nbreTypos = PFont.list().length;
     println( "Nombre de Typos: " + nbreTypos );
     
@@ -30,8 +29,8 @@ void setup()
 
 void draw()
 {
-	 //si on appuie sur la souris
-    if ( mousePressed )
+	//si on appuie sur la souris
+    if ( mousePressed == true )
     {
 
     	// on calcule le déplacement de la souris depuis la frame précédente
