@@ -110,9 +110,10 @@ création et types de variables:
 
 ###REPETITIONS
 ```
-  int compteurA = 0;
-  while( compteurA < 10 )
+  int compteur = 0;
+  while( compteur < 10 )
   {
+    compteur = compteur + 1;
     ... doSomething
   }  
 ```
