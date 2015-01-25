@@ -1,14 +1,11 @@
 #Processing Lyon # 05
 
-L: J'ai mis en commentaire ce qu'il me semble pas nécessaire
-
 ###Raccourcis
 
 ->Run         : CTRL+R  
 ->Référence   : CTRL+MAJ+F   
 ->Auto indent : CTRL+T  
 
-L: Je serais pour démarrer l'atelier directement avec le mode continu, ça peut faire gagner du temps
 ```
   void setup()
   {
@@ -27,7 +24,6 @@ L: Je serais pour démarrer l'atelier directement avec le mode continu, ça peut
   quad(x1, y1, x2, y2, x3, y3, x4, y4);  
 ```
 
-Est-ce qu'on montre les shapes?
 ```
   beginShape();   
   vertex(x,y);  

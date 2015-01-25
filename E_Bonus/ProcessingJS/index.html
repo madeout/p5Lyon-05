@@ -1,91 +1,118 @@
-<title>Hello ProcessingJS</title>
-<script src="processing-1.4.1.min.js"></script>  
-<script src="init.js"></script>
-<script type="application/processing">
-	// références pour ProcessingJS sur processingjs.org
-	// copiez/collez directement votre code processing ici:
-	///////////////////////////////////////////////////////
-	float x, y, vitX, vitY, taille;
-	int timer=0;
-
-	void setup() {
-	  size(window.innerWidth-15, window.innerHeight-20, P2D);
-	  // window.innerWidth/innerHeight sont des propriétés javascript permettant de récupérer la taille de la fenêtre du navigateur,
-	  // elles ne peuvent s'utiliser qu'avec la version javascript de Processing: ProcessingJS
-	  smooth();//lissage de l'affichage
-	  frameRate(100);//vitesse de lecture
-
-	  //initialisation des variables
-	  x=random(30,width-30);
-	  y=random(30,height-30);
-	  vit();//appel de la fonction vit()
-
-	  background(255);
-	  rectMode(CENTER);
-	}
-
-	void draw() {
-	  if(frameCount%2000==0) {
-	    //ré-initialisation
-	    background(255);
-	    x=random(30,width-30);
-	    y=random(30,height-30);
-	    vit();
-	  }
-	  //timer
-	  timer++;
-	  if (timer>50) {
-		vit();
-		timer=0;
-	  }
-
-	  //détection des colisions sur les côtés
-	  if (x+vitX>30 && x+vitX<width-30) {
-		x=x+vitX;
-	  }
-	  else {
-		vit();
-		timer=0;
-	  }
-
-	  //détection des colisions sur le haut et le bas
-	  if (y+vitY>30 && y+vitY<height-30) {
-		y=y+vitY;
-	  }
-	  else {
-		vit();
-		timer=0;
-	  }
-
-	  //colorMode(HSB);
-	  //fill(frameCount%255, 255, 255);
-	  //noStroke();
-
-	  rect(x, y, taille, taille);
-	  rect(width-x, y, taille, taille);
-	  rect(x, height-y, taille, taille);
-	  rect(width-x, height-y, taille, taille);
-	}
-
-	void vit() {
-	  //changement des vitesses en x et y, et de la taille
-	  vitX=floor(random(-6, 7));
-	  vitY=floor(random(-6, 7));
-	  taille=random(5, 30);
-	}
-
-	void mousePressed() {
-	  //ré-initialisation
-	  background(255);
-	  x=random(30,width-30);
-	  y=random(30,height-30);
-	  vit();
-	}
-
-	void keyPressed() {
-	  //export de l'image
-	  saveFrame(frameCount+".jpg");
-	}
-	///////////////////////////////////////////////////////
-</script>
-<canvas> </canvas>
+<html>
+<head>
+	<title>Hello ProcessingJS</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.8/processing.js"></script>
+	
+	<style>
+		body{
+			margin:0;
+		}
+		canvas{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<script type="application/processing">
+		// rÃ©fÃ©rences pour ProcessingJS sur processingjs.org
+		// copiez/collez directement votre code processing ici:
+		///////////////////////////////////////////////////////
+		float x, y, vitX, vitY, taille;
+		int timer=0;
+	
+		void setup()
+		{
+			size( window.innerWidth, window.innerHeight );
+			// window.innerWidth/innerHeight sont des propriÃ©tÃ©s javascript permettant de rÃ©cupÃ©rer la taille de la fenÃªtre du navigateur,
+			// elles ne peuvent s'utiliser qu'avec la version javascript de Processing: ProcessingJS
+			
+			//initialisation des variables
+			x=random(30,width-30);
+			y=random(30,height-30);
+			vit();//appel de la fonction vit()
+			
+			background(255);
+			rectMode(CENTER);
+		}
+	
+		void draw()
+		{
+			if(frameCount%2000==0)
+			{
+				//rÃ©-initialisation
+				background(255);
+				x=random(30,width-30);
+				y=random(30,height-30);
+				vit();
+			}
+			
+			//timer
+			timer++;
+			if (timer>50)
+			{
+				vit();
+				timer=0;
+			}
+			
+			//dÃ©tection des colisions sur les cÃ´tÃ©s
+			if (x+vitX>30 && x+vitX<width-30)
+			{
+				x=x+vitX;
+			}
+			else
+			{
+				vit();
+				timer=0;
+			}
+			
+			//dÃ©tection des colisions sur le haut et le bas
+			if (y+vitY>30 && y+vitY<height-30)
+			{
+				y=y+vitY;
+			}
+			else {
+				vit();
+				timer=0;
+			}
+			
+			//colorMode(HSB);
+			//fill(frameCount%255, 255, 255);
+			//noStroke();
+			
+			rect(x, y, taille, taille);
+			rect(width-x, y, taille, taille);
+			rect(x, height-y, taille, taille);
+			rect(width-x, height-y, taille, taille);
+		}
+	
+		void vit()
+		{
+			//changement des vitesses en x et y, et de la taille
+			vitX=floor(random(-6, 7));
+			vitY=floor(random(-6, 7));
+			taille=random(5, 30);
+		}
+	
+		void mousePressed()
+		{
+			//rÃ©-initialisation
+			background(255);
+			x=random(30,width-30);
+			y=random(30,height-30);
+			vit();
+		}
+	
+		void keyPressed()
+		{
+			//export de l'image
+			saveFrame(frameCount+".jpg");
+		}
+		///////////////////////////////////////////////////////
+	</script>
+	<canvas> </canvas>
+</body>
+</html>
