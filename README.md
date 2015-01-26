@@ -158,7 +158,7 @@ imbrication de plusieurs boucles for
   PFont font;  
   println(PFont.list());  
   font = createFont("FFScala", 32);  
-  font = createFont(name, size, smooth) smooth=true||false  
+  font = createFont(name, size)
   textMode(SCREEN);  
   textFont(font);
 ```
