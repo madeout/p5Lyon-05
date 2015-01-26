@@ -150,7 +150,7 @@ imbrication de plusieurs boucles for
 ```
   String str="une phrase";  
   text("word",x,y);  
-  String[] str = loadStrings("monFichier.txt");  // demande l'introduction des tableaux....
+  String[] str = loadStrings("monFichier.txt");
 ```
 
 ###TYPO
